@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b54c1d4d8c",applicationID:"597292158"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init', "321799888466300");fbq('track', "PageView");</script>
+<meta name="title" content="The Importance of Ethical Travel | Voices of Youth" />
+<meta name="twitter:card" content="summary" />
+<meta property="og:site_name" content="Voices of Youth" />
+<link rel="canonical" href="https://www.voicesofyouth.org/blog/importance-ethical-travel" />
+<meta name="twitter:title" content="The Importance of Ethical Travel" />
+<meta property="og:url" content="https://www.voicesofyouth.org/blog/importance-ethical-travel" />
+<meta property="og:title" content="The Importance of Ethical Travel" />
+<meta name="twitter:url" content="https://www.voicesofyouth.org/blog/importance-ethical-travel" />
+<meta name="twitter:image:alt" content="Ethical Travel" />
+<meta name="twitter:image" content="https://www.voicesofyouth.org/sites/voy/files/styles/blog_teaser/public/images/2019-11/theimportanceofethicaltravel.jpg?h=d436b1ff&amp;itok=7Fs3CarG, https://www.voicesofyouth.org/sites/voy/themes/custom/unicef_voy/images/voices.jpg" />
+<meta property="og:image" content="https://www.voicesofyouth.org/sites/voy/files/styles/blog_teaser/public/images/2019-11/theimportanceofethicaltravel.jpg?h=d436b1ff&amp;itok=7Fs3CarG" />
+<meta property="og:image" content="https://www.voicesofyouth.org/sites/voy/themes/custom/unicef_voy/images/voices.jpg" />
+<meta property="og:image:alt" content="Ethical Travel" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #0779bf} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, #sliding-popup label, #sliding-popup div, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<link rel="alternate" hreflang="en" href="https://www.voicesofyouth.org/blog/importance-ethical-travel" />
+<link rel="revision" href="https://www.voicesofyouth.org/blog/importance-ethical-travel" />
+<script src="/sites/voy/files/google_tag/google_tag.script.js?qi1bg8" defer="defer"></script>
+
+    <title>The Importance of Ethical Travel | Voices of Youth</title>
+    <link rel="stylesheet" media="all" href="/core/modules/system/css/components/align.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/fieldgroup.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/container-inline.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/clearfix.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/details.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/hidden.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/item-list.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/js.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/nowrap.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/position-container.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/progress.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/reset-appearance.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/resize.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/sticky-header.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-counter.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-counters.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/system-status-report-general-info.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tablesort.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/system/css/components/tree-child.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/poll/css/poll.base.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/poll/css/poll.theme.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/modules/views/css/views.module.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/blazy/css/components/blazy.loading.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/core.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/resizable.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/menu.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/autocomplete.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/eu_cookie_compliance/css/eu_cookie_compliance.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/extlink/extlink.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/paragraphs/css/paragraphs.unpublished.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/assets/vendor/jquery.ui/themes/base/theme.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/search_api_autocomplete/css/search_api_autocomplete.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/flag/css/flag-link-ajax.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/modules/contrib/flag/css/flag-link.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/core/themes/classy/css/components/node.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/sites/voy/themes/custom/unicef_voy/bower_components/jquery-colorbox/example2/colorbox.css?qi1bg8" />
+<link rel="stylesheet" media="all" href="/sites/voy/themes/custom/unicef_voy/css/style.css?qi1bg8" />
+<link rel="stylesheet" media="print" href="/sites/voy/themes/custom/unicef_voy/css/print.css?qi1bg8" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/voy/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/sites/voy/files/js/js_B7pS3ddmNLFYOJi3j28odiodelMu-EhaOeKlHZ8E6y0.js"></script>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,700');
+</style>
+
+<script src="https://use.fontawesome.com/fd7b9d90d0.js"></script>
+
+<link rel="apple-touch-icon" sizes="180x180" href="/sites/voy/themes/custom/unicef_voy/dist/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/sites/voy/themes/custom/unicef_voy/dist/images/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/sites/voy/themes/custom/unicef_voy/dist/images/favicons/favicon-16x16.png">
+<link rel="manifest" href="/sites/voy/themes/custom/unicef_voy/dist/images/favicons/site.webmanifest">
+<link rel="mask-icon" href="/sites/voy/themes/custom/unicef_voy/dist/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#1cabe2">
+
+  </head>
+  <body class="topic-141 node-11661 anonymous path-node page-node-type-blog has-glyphicons">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5RDP76T" height="0" width="0" title="Google Tag Manager"></iframe></noscript><noscript><img height="1" width="1" src="https://www.facebook.com/tr?id=321799888466300&amp;ev=PageView&amp;noscript=1" /></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="site-wrapper">
+  <div class="layout-container">
+    <header id="header">
+      <div id="masthead" class="masthead">
+          <div class="region region-masthead-actions">
+    <section class="language-switcher-language-url block block-language block-language-blocklanguage-interface clearfix" id="block-unicef-voy-languageswitcher" role="navigation" data-set="ss-lang-switcher">
+  
+    
+
+      <ul class="links" region="masthead_actions"><li hreflang="en" data-drupal-link-system-path="node/11661" class="en is-active"><a href="/blog/importance-ethical-travel" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/11661">English</a></li><li hreflang="ar" data-drupal-link-system-path="node/11661" class="ar"><a href="/ar/node/11661" class="language-link" hreflang="ar" data-drupal-link-system-path="node/11661">Arabic</a></li><li hreflang="es" data-drupal-link-system-path="node/11661" class="es"><a href="/es/node/11661" class="language-link" hreflang="es" data-drupal-link-system-path="node/11661">Español</a></li><li hreflang="fr" data-drupal-link-system-path="node/11661" class="fr"><a href="/fr/node/11661" class="language-link" hreflang="fr" data-drupal-link-system-path="node/11661">Français</a></li></ul>
+  </section>
+
+  <div class="ss-anon-org" data-set="anon-container">
+    <div class="anon-search-wrapper">
+<nav role="navigation" aria-labelledby="block-anonymousmenu-menu" id="block-anonymousmenu" class="block block-menu-block block-menu-blockanonymous-menu clearfix">
+            <h2 class="sr-only" id="block-anonymousmenu-menu">Anonymous Menu</h2>
+
+      
+
+      <ul region="masthead_actions" class="menu menu--anonymous-menu nav">
+                        <li>
+        <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a>
+                  </li>
+        </ul>
+  
+
+
+  </nav>
+
+<div class="search-toggle-wrapper">
+  <a href="javascript:void(0)" aria-expanded="false" class="search-toggle">Search</a>
+  </div>
+</div>
+</div>
+
+    <div class="ss-header">
+      <a href="#" class="menu-open-icon"><span class="visually-hidden">Menu</span><i class="icon-menu"></i></a>
+    </div>
+  </div>
+
+          <div class="region region-masthead-primary">
+    <section id="block-leftlogo" class="block--logo_block block-leftlogo block block-block-content block-block-content8ca1f4dc-3339-4f9b-ba28-f1fd3f5eaaff clearfix">
+  
+    
+
+      <a href="/">
+            <div class="field field--name-field-media-logo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img width="" height="" src="/sites/voy/files/images/2018-10/voy-logo-2018.svg" alt="Voy Logo" typeof="foaf:Image" class="img-responsive" />
+
+</div>
+                </div>
+
+</div>
+</div>
+      </a>
+  </section>
+
+  <nav role="navigation" aria-labelledby="block-unicef-voy-main-menu-menu" id="block-unicef-voy-main-menu" class="block block-system block-system-menu-blockmain clearfix" data-set="ss-nav-primary">
+                      <h2 class="sr-only" id="block-unicef-voy-main-menu-menu">Main navigation</h2>
+
+          
+      <ul region="masthead_primary" class="menu menu--main nav navbar-nav">
+                        <li class="expanded dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">Get Inspired <span class="caret"></span></a>
+                          <ul region="masthead_primary" class="dropdown-menu">
+                        <li>
+        <a href="/blog" data-drupal-link-system-path="blog">Blog</a>
+                  </li>
+                        <li>
+        <a href="/inspire" data-drupal-link-system-path="inspire">Spark</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">Share <span class="caret"></span></a>
+                          <ul region="masthead_primary" class="dropdown-menu">
+                        <li>
+        <a href="/share/how-submit-blog-voices-youth" data-drupal-link-system-path="node/481">How to Submit</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">Act <span class="caret"></span></a>
+                          <ul region="masthead_primary" class="dropdown-menu">
+                        <li>
+        <a href="/tools-resources" data-drupal-link-system-path="tools-resources">Advocacy and Storytelling Tools</a>
+                  </li>
+                        <li>
+        <a href="/opportunities" data-drupal-link-system-path="opportunities">Opportunities</a>
+                  </li>
+                        <li>
+        <a href="/how-write-about-disability-rights" data-drupal-link-system-path="node/3166">How to write about disability rights</a>
+                  </li>
+                        <li>
+        <a href="/act/how-stay-safe-online" data-drupal-link-system-path="node/411">How to stay safe online</a>
+                  </li>
+                        <li>
+        <a href="/act/how-strengthen-your-message-data" data-drupal-link-system-path="node/5981">How to strengthen your message with data</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown">
+        <a href="" class="dropdown-toggle" data-toggle="dropdown">React <span class="caret"></span></a>
+                          <ul region="masthead_primary" class="dropdown-menu">
+                        <li>
+        <a href="/topic/culture" data-drupal-link-system-path="taxonomy/term/156">Culture</a>
+                  </li>
+                        <li>
+        <a href="/topic/education" data-drupal-link-system-path="taxonomy/term/131">Education</a>
+                  </li>
+                        <li>
+        <a href="/topic/employment" data-drupal-link-system-path="taxonomy/term/151">Employment</a>
+                  </li>
+                        <li>
+        <a href="/topic/environment" data-drupal-link-system-path="taxonomy/term/141">Environment</a>
+                  </li>
+                        <li>
+        <a href="/topic/health" data-drupal-link-system-path="taxonomy/term/136">Health</a>
+                  </li>
+                        <li>
+        <a href="/topic/human-rights" data-drupal-link-system-path="taxonomy/term/126">Human Rights</a>
+                  </li>
+                        <li>
+        <a href="/topic/innovation-technology" data-drupal-link-system-path="taxonomy/term/161">Innovation &amp; technology</a>
+                  </li>
+                        <li>
+        <a href="/topic/personal-growth" data-drupal-link-system-path="taxonomy/term/166">Personal Growth</a>
+                  </li>
+                        <li>
+        <a href="/topic/violence-conflict" data-drupal-link-system-path="taxonomy/term/146">Violence &amp; conflict</a>
+                  </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+
+      </nav>
+
+  </div>
+
+          <div class="region region-masthead-secondary">
+    <div class="ss-add-content-dest" data-set="add-content-container">
+    </div>
+    <div class="ss-anon-dest" data-set="anon-container">
+    </div>
+    <div class="ss-user-dest" data-set="user-container">
+    </div>
+    <section id="block-rightlogo" class="block--logo_block block-rightlogo block block-block-content block-block-content3f7cf41f-7548-444b-afd3-f216baba16f0 clearfix">
+  
+    
+
+      <a href="https://www.unicef.org/">
+            <div class="field field--name-field-media-logo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img width="" height="" src="/sites/voy/files/images/2018-11/logo-english_0.svg" alt="UNICEF Vertical Logo" typeof="foaf:Image" class="img-responsive" />
+
+</div>
+                </div>
+
+</div>
+</div>
+      </a>
+  </section>
+
+
+
+  </div>
+
+
+      </div>
+      <div class="ss-nav-container">
+        <h3>Menu</h3>
+        <a href="#" class="menu-close-icon"><i class="icon-close"></i><span class="visually-hidden">Close Menu</span></a>
+        <div class="ss-nav">
+          <div class="ss-nav-primary" data-set="ss-nav-primary"></div>
+          <div class="ss-lang-switcher" data-set="ss-lang-switcher"></div>
+          <div class="ss-account" data-set="ss-account"></div>
+        </div>
+      </div>
+    </header>
+
+              <div role="main" class="main-container  js-quickedit-main-content">
+        <div class="row">
+
+                    
+                    
+                        <div class="region region-content-prefix">
+    <section class="views-exposed-form search-drop block block-views block-views-exposed-filter-blocksearch-page-1 clearfix" novalidate="novalidate" data-drupal-selector="views-exposed-form-search-page-1" id="block-exposedformsearchpage-1">
+  
+    
+
+      <div class="search-container">
+      <form region="content_prefix" action="/search" method="get" id="views-exposed-form-search-page-1" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-search-api-autocomplete js-form-type-search-api-autocomplete form-item-keywords js-form-item-keywords form-no-label form-group form-autocomplete">
+      <label for="edit-keywords" class="control-label sr-only">Search</label>
+  
+  
+  <div class="input-group"><input placeholder="Search" data-drupal-selector="edit-keywords" data-search-api-autocomplete-search="search" class="form-autocomplete form-text form-control" data-autocomplete-path="/search_api_autocomplete/search?display=page_1&amp;&amp;filter=keywords" type="text" id="edit-keywords" name="keywords" value="" size="30" maxlength="128" /><span class="input-group-addon"><span class="icon glyphicon glyphicon-refresh ajax-progress ajax-progress-throbber" aria-hidden="true"></span></span></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-search" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-search" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+    </div>
+    </div>
+  </section>
+
+
+  </div>
+
+          
+                              <section class="col-sm-12">
+
+                        
+                                      <a id="main-content"></a>
+                <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>  
+
+
+<article data-history-node-id="11661" role="article" about="/blog/importance-ethical-travel" class="topic-141 node node--type-blog is-promoted is-sticky full clearfix">
+
+  
+  <div class="content">
+    <div class="link-see-more"><span class="glyphicon glyphicon-arrow-left"></span><a href="/blog">See more blogs</a></div>
+<div  class="group--article-header">
+      
+          <div class="field-wrapper">
+
+      <div class="field field--name-field-topics field--type-entity-reference field--label-hidden field--item"><a href="/topic/environment" hreflang="en">Environment</a></div>
+    </div>
+      
+  <h1 class="page-header">The Importance of Ethical Travel</h1>
+
+            <div class="field field--name-field-date field--type-datetime field--label-hidden field--item"><time datetime="2019-11-25T12:00:00Z">November 25, 2019</time>
+</div>
+      
+<div class="block--article-author">
+  <div class="layout-content">
+      <div class="author-block-image">
+      <img src="https://www.voicesofyouth.org/sites/voy/files/styles/thumbnail/public/pictures/2019-04/authorphoto_bio.jpg?itok=_ySGcX5I"  alt="A black and white photo of me, Indiana Lee." />
+    </div>
+      <div class="author-meta">
+      <div class="author-block-name">By <a href="/user/indianaleewrites">indianaleewrites</a></div>
+      <div class="node-user-engagement">
+        <div class="node-like"><div class="flag flag-like js-flag-like-11661 action-flag"><a title="" href="/flag/flag/like/11661?destination=/blog/importance-ethical-travel&amp;token=sAp1Ab-r4L5rho210_Xc9NvvLOM7QvdWXDNKPImk-uA" class="use-ajax" rel="nofollow">Like</a><span class="count">179</span></div></div>
+        <div class="node-comment"><div class="link-comments"><a href="/blog/importance-ethical-travel#disqus_comments">Comments</a></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+<div  class="group-article-content-wrapper">
+      
+<div  class="group--article-share-content">
+      <div class="flag flag-like js-flag-like-11661 action-flag"><a title="" href="/flag/flag/like/11661?destination=/blog/importance-ethical-travel&amp;token=sAp1Ab-r4L5rho210_Xc9NvvLOM7QvdWXDNKPImk-uA" class="use-ajax" rel="nofollow">Like</a><span class="count">179</span></div><div class="link-comments"><a href="/blog/importance-ethical-travel#disqus_comments">Comments</a></div><div class="sharethis-wrapper"><span st_url="https://www.voicesofyouth.org/blog/importance-ethical-travel" st_title="The Importance of Ethical Travel" class="st_facebook"></span>
+<span st_url="https://www.voicesofyouth.org/blog/importance-ethical-travel" st_title="The Importance of Ethical Travel" class="st_twitter"></span>
+</div><div class="link-post"><a href="/add/blog">Post</a><span class="hidden"><a href="/add/blog">Submit a post</a></span></div>
+  </div>
+
+<div  class="group--article-content">
+      
+            <div class="field field--name-field-main-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="blazy field field--name-field-media-image field--type-image field--label-visually_hidden" data-blazy="">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">
+
+
+
+                    <div class="media media--blazy media--loading media--image">
+      <img height="1789" width="2500" class="b-lazy media__image media__element img-responsive" data-src="/sites/voy/files/images/2019-11/theimportanceofethicaltravel.jpg" alt="Ethical Travel" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" typeof="foaf:Image" />
+
+        
+      
+    </div>
+        
+  
+</div>
+                </div>
+
+  <div class="field field--name-field-image-credit field--type-text-or-link field--label-above">
+    <div class="field--label">Image Credit</div>
+              <div class="field--item"><a href="https://unsplash.com/photos/_g1WdcKcV3w" target="_blank">Unsplash </a></div>
+          </div>
+
+</div>
+</div>
+      
+            <div class="field field--name-field-description field--type-text-long field--label-hidden field--item"><p>In the excitement of trip planning and anticipation of visiting a new destination, it’s easy to overlook the ethical implications of travel. In order to preserve the world they love exploring, travelers must be conscious of the ways in which their tourism impacts the environment and local communities.  </p>
+<p>While what it means to travel ethically changes from destination to destination, there are several key points you can follow to travel the world responsibly and mindfully. Ethical travel requires some effort and forethought, but if you’ve been fortunate enough to experience the joys of travel, you’re likely to find respecting local culture and the environment worthwhile.</p>
+<p>Even though awareness about ethical travel is on the rise, travelers’ efforts must be continuous in order to preserve the world for future generations of adventure seekers. Because the travel trend shows no signs of slowing down, ethical travel must be a priority for anyone booking a ticket to anywhere.</p>
+</div>
+      
+      <div class="field field--name-field-media field--type-entity-reference-revisions field--label-hidden field--items">
+              <div class="field--item">  <div class="paragraph paragraph--type--quote paragraph--view-mode--default">
+          
+            <div class="field field--name-field-quote field--type-string-long field--label-hidden field--item">Ethical travel requires some effort and forethought, but if you’ve been fortunate enough to experience the joys of travel, you’re likely to find respecting local culture and the environment worthwhile.</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text field--type-text-long field--label-hidden field--item"><h2>Why is ethical travel important?</h2>
+
+<p>The first step to <a href="https://young.scot/get-informed/national/what-is-ethical-tourism">traveling ethically</a> is recognizing the consequences of your actions as a tourist on the environment, local people and local economy. Even places in the world where the tourism industry is the primary source of income and jobs can suffer the negative effects of travel.</p>
+
+<p>As a destination increasingly caters to tourists, the negative effects of travel become more evident. For example, chain restaurants and stores have forced local shops out of business. Voluntourism (or volunteer travel) has taken physical labor jobs away from locals. Increased air travel has added to pollution. Wildlife tourist attractions frequently involve the harm and exploitation of animals.</p>
+
+<p>With all the potential for negative repercussions as travel currently stands, ethical travel is more important than ever. From understanding your impact on the environment to being culturally competent in a new place, ethical travel benefits Mother Earth, the tourism industry, locals, and travelers themselves.</p>
+
+<h2>How ethical travel benefits travelers</h2>
+
+<p>That’s right: traveling ethically will benefit you as a traveler.</p>
+
+<p>In fact, without ethical travel, you might as well forget about your dream of “experiencing a different culture.” In <a href="https://greenglobaltravel.com/why-responsible-tourism-is-better/">destinations plagued by over-tourism</a>, cultural travel is often just a tourism-based spectacle. On the other hand, in places where ethical travel is prioritized, locals have a chance to share meaningful versions of themselves and their history. This type of genuine cultural immersion through <a href="https://www.voicesofyouth.org/blog/can-travelling-and-studying-increase-tolerance">travel increases tolerance</a> and respect for diversity.</p>
+
+<p>Like getting the chance to have an authentic cultural experience, traveling ethically helps maintain pristine places to visit. The blog Green Global Travel says the growing demand for everything from tour operators that protect wildlife to eco-friendly hotels and restaurants is helping to shape a more ethical tourism industry. These types of sustainable tourism efforts are necessary in order to preserve destinations for both today and tomorrow’s travelers.</p></div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--quote paragraph--view-mode--default">
+          
+            <div class="field field--name-field-quote field--type-string-long field--label-hidden field--item">Ethical travel is more important than ever. From understanding your impact on the environment to being culturally competent in a new place, ethical travel benefits Mother Earth, the tourism industry, locals, and travelers themselves.</div>
+      
+      </div>
+</div>
+              <div class="field--item">  <div class="paragraph paragraph--type--text paragraph--view-mode--default">
+          
+            <div class="field field--name-field-text field--type-text-long field--label-hidden field--item"><h2>Practicing ethical travel</h2>
+
+<p>Now that you understand what ethical travel is, why it is important, and how ethical travel benefits you as a traveler, here are some ways you can practice ethical travel.</p>
+
+<p>To minimize your negative impacts on the environment, travel website Jet Set Times suggests you should opt for land travel and public transportation whenever possible, avoid single-use plastics, pick up litter and seek ethical animal encounters — just because you saw a picture on Instagram of someone riding an elephant doesn’t mean you should. Similarly, the Young Scot organization suggests avoiding purchasing products made from endangered or wild animals.</p>
+
+<p>Instead of a souvenir starfish, buy locally-sourced products from locally-owned businesses. Other ways to minimize your negative impacts on local communities include searching for family-owned accommodation or trying Couchsurfing, properly researching voluntourism organizations, learning some key phrases in the local language, and knowing cultural norms before you arrive.</p>
+
+<p>Traveling ethically starts before you even leave home with what travel essentials you decide to pack. Utilizing resources like <a href="https://www.voicesofyouth.org/blog/travel-through-time-and-space">books</a> when planning your trip can help you feel more prepared for your travel experience in a new place.</p>
+
+<p>In addition to packing, your trip planning process should include learning about the cultural landscape of the place you’re visiting. </p>
+
+<h2>Ethical travel simplified</h2>
+
+<p>Whether you’re planning a trip to a nearby city or the other side of the world, it’s important to be conscious of your impact on the environment and local communities. Understanding the negative impacts of travel is the critical first step on your journey to traveling ethically. Some travelers might find the concept of ethical travel daunting, but it doesn’t need to be.</p>
+
+<p>At its heart, ethical travel is simply a way to describe how you should act when you’re traveling — which, according to Jetset Times, is with curiosity, compassion and understanding.</p></div>
+      
+      </div>
+</div>
+          </div>
+  
+            <div class="field field--name-field-blog-type field--type-entity-reference field--label-hidden field--item">Blog</div>
+      
+      <div class="field field--name-field-tags field--type-entity-reference field--label-hidden field--items">
+              <div class="field--item"><a href="/tag/books" hreflang="en">books</a></div>
+              <div class="field--item"><a href="/tag/ecological-footprint" hreflang="en">ecological footprint</a></div>
+              <div class="field--item"><a href="/tag/environment" hreflang="en">environment</a></div>
+              <div class="field--item"><a href="/tag/global-goals" hreflang="en">Global Goals</a></div>
+              <div class="field--item"><a href="/tag/intercultural-dialogue" hreflang="en">intercultural dialogue</a></div>
+              <div class="field--item"><a href="/tag/international-relations" hreflang="en">international relations</a></div>
+              <div class="field--item"><a href="/tag/tourism" hreflang="en">tourism</a></div>
+              <div class="field--item"><a href="/tag/travel" hreflang="en">travel</a></div>
+          </div>
+  
+            <div id="disqus_comments" class="field field--name-field-comments field--type-disqus-comment field--label-hidden field--item"><div id="disqus_thread" class="form-group"><noscript>
+  <p>
+    <a href="http://voydev.disqus.com/">View the discussion thread.</a>
+  </p>
+</noscript>
+</div>
+</div>
+      
+  </div>
+
+  </div>
+
+  </div>
+
+</article>
+
+<section class="views-element-container block block-views block-views-blockrelated-blogs-related-stories-block clearfix" id="block-unicef-voy-views-block-related-blogs-related-stories-block">
+  
+    
+
+      <div region="content" class="form-group"><div class="view view-related-blogs view-id-related_blogs view-display-id-related_stories_block js-view-dom-id-77c4e82d97d24d37ce56ac003f7826eb6a4269bbb6522b701243b799d52c0642">
+  
+    
+      <div class="view-header">
+      <h2 class="block-title">Related Stories</h2><a href="/node/add/blog/user_content">Submit a Post</a>
+    </div>
+      
+      <div class="view-content">
+      <div data-drupal-views-infinite-scroll-content-wrapper class="views-infinite-scroll-content-wrapper clearfix form-group">    <div class="views-row">
+
+
+<article data-history-node-id="24411" role="article" about="/blog/deep-inside" class="topic-166 node node--type-blog teaser clearfix">
+      
+            <div class="field field--name-field-main-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img src="/sites/voy/files/styles/blog_teaser/public/images/2020-08/20200818_200956_0000.png?h=8e28f27e&amp;itok=9nFlU23h" width="770" height="620" alt="Template for Deep Inside" typeof="foaf:Image" class="img-responsive" />
+
+
+</div>
+                </div>
+
+</div>
+</div>
+      
+
+  <div class="content">
+    <div class="content-inner">
+      
+          <div class="field-wrapper">
+
+      <div class="field field--name-field-topics field--type-entity-reference field--label-hidden field--item"><a href="/topic/personal-growth" hreflang="en">Personal growth</a></div>
+    </div>
+      
+  <h3 class="page-header"><a href="/blog/deep-inside">Deep Inside</a></h3>
+
+<div class="block--article-author">
+  <div class="layout-content">
+      <div class="author-meta">
+      <div class="author-block-name">By <a href="/user/kajal-singh">Kajal Singh</a></div>
+      <div class="node-user-engagement">
+        <div class="node-like"></div>
+        <div class="node-comment"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+  </div>
+</article>
+</div>
+    <div class="views-row">
+
+
+<article data-history-node-id="24311" role="article" about="/blog/world-we-all-go-escape" class="topic-166 node node--type-blog teaser clearfix">
+      
+            <div class="field field--name-field-main-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img src="/sites/voy/files/styles/blog_teaser/public/images/2020-08/amani.jpg?h=93fa4828&amp;itok=79dRWthi" width="770" height="620" alt="A young girl with bright blue eyes and a red scarf over her hair " typeof="foaf:Image" class="img-responsive" />
+
+
+</div>
+                </div>
+
+</div>
+</div>
+      
+
+  <div class="content">
+    <div class="content-inner">
+      
+          <div class="field-wrapper">
+
+      <div class="field field--name-field-topics field--type-entity-reference field--label-hidden field--item"><a href="/topic/personal-growth" hreflang="en">Personal growth</a></div>
+    </div>
+      
+  <h3 class="page-header"><a href="/blog/world-we-all-go-escape">The world we all go to escape </a></h3>
+
+<div class="block--article-author">
+  <div class="layout-content">
+      <div class="author-meta">
+      <div class="author-block-name">By <a href="/user/117881">ab44</a></div>
+      <div class="node-user-engagement">
+        <div class="node-like"></div>
+        <div class="node-comment"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+  </div>
+</article>
+</div>
+    <div class="views-row">
+
+
+<article data-history-node-id="23981" role="article" about="/blog/being-autistic-teen-quarantine-and-staying-occupied" class="topic-166 node node--type-blog teaser clearfix">
+      
+            <div class="field field--name-field-main-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img src="/sites/voy/files/styles/blog_teaser/public/images/2020-08/puzzle-pieces-in-hand.jpg?h=e436a998&amp;itok=EoH0BM-V" width="770" height="620" alt="A hand holding a colored puzzle piece." typeof="foaf:Image" class="img-responsive" />
+
+
+</div>
+                </div>
+
+</div>
+</div>
+      
+
+  <div class="content">
+    <div class="content-inner">
+      
+          <div class="field-wrapper">
+
+      <div class="field field--name-field-topics field--type-entity-reference field--label-hidden field--item"><a href="/topic/personal-growth" hreflang="en">Personal growth</a></div>
+    </div>
+      
+  <h3 class="page-header"><a href="/blog/being-autistic-teen-quarantine-and-staying-occupied">Being an autistic teen in quarantine and staying occupied.</a></h3>
+
+<div class="block--article-author">
+  <div class="layout-content">
+      <div class="author-meta">
+      <div class="author-block-name">By <a href="/user/118116">AnimeUnnie6</a></div>
+      <div class="node-user-engagement">
+        <div class="node-like"></div>
+        <div class="node-comment"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+  </div>
+</article>
+</div>
+    <div class="views-row">
+
+
+<article data-history-node-id="22491" role="article" about="/blog/no-turning-back" class="topic-166 node node--type-blog teaser clearfix">
+      
+            <div class="field field--name-field-main-image field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img src="/sites/voy/files/styles/blog_teaser/public/images/2020-07/20200709_154620_0000.png?h=f19219a5&amp;itok=vDJwNH1l" width="770" height="620" alt="Template for &#039;No turning back&#039;" typeof="foaf:Image" class="img-responsive" />
+
+
+</div>
+                </div>
+
+</div>
+</div>
+      
+
+  <div class="content">
+    <div class="content-inner">
+      
+          <div class="field-wrapper">
+
+      <div class="field field--name-field-topics field--type-entity-reference field--label-hidden field--item"><a href="/topic/personal-growth" hreflang="en">Personal growth</a></div>
+    </div>
+      
+  <h3 class="page-header"><a href="/blog/no-turning-back">No Turning Back</a></h3>
+
+<div class="block--article-author">
+  <div class="layout-content">
+      <div class="author-meta">
+      <div class="author-block-name">By <a href="/user/kajal-singh">Kajal Singh</a></div>
+      <div class="node-user-engagement">
+        <div class="node-like"></div>
+        <div class="node-comment"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+          </div>
+  </div>
+</article>
+</div>
+</div>
+
+    </div>
+  
+      
+<ul class="js-pager__items pager" data-drupal-views-infinite-scroll-pager>
+  <li class="pager__item">
+    <a class="button" href="?page=1" title="Go to next page" rel="next">View More</a>
+  </li>
+</ul>
+
+          </div>
+</div>
+
+  </section>
+
+
+  </div>
+
+                      </section>
+
+                            </div>
+      </div>
+    
+      <div class="region region-content-bottom">
+          <section id="block-socialmediablock" class="block--social_media_logos block-socialmediablock block block-block-content block-block-content40b5e053-7ce5-44a1-8c2d-595a53f27060 clearfix">
+  
+    
+
+      
+            <div class="field field--name-field-title field--type-string field--label-hidden field--item">Follow us</div>
+      
+            <div class="field field--name-field-description field--type-string-long field--label-hidden field--item">Join the discussion on social media</div>
+      
+<div  class="icon-container">
+      
+            <div class="field field--name-twitter field--type-link field--label-hidden field--item"><a href="https://twitter.com/voicesofyouth">https://twitter.com/voicesofyouth</a></div>
+      
+            <div class="field field--name-facebook field--type-link field--label-hidden field--item"><a href="https://www.facebook.com/voicesofyouth">https://www.facebook.com/voicesofyouth</a></div>
+      
+            <div class="field field--name-instagram field--type-link field--label-hidden field--item"><a href="https://www.instagram.com/voicesofyouth/">https://www.instagram.com/voicesofyouth/</a></div>
+      
+  </div>
+
+  </section>
+
+
+      </div>
+
+
+    <footer class="footer " role="contentinfo">
+                <div class="region region-footer-first">
+    <section id="block-footervoylogo" class="block--logo_block block-footervoylogo block block-block-content block-block-content85e49ee2-c9f4-42c8-aab9-d0853fe4728a clearfix">
+  
+    
+
+      <a href="/">
+            <div class="field field--name-field-media-logo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img width="" height="" src="/sites/voy/files/images/2018-10/voy-logo-2018-white.svg" alt="VOY Logo" typeof="foaf:Image" class="img-responsive" />
+
+</div>
+                </div>
+
+</div>
+</div>
+      </a>
+  </section>
+
+<section id="block-footeruniceflogo" class="block--logo_block block-footeruniceflogo block block-block-content block-block-contente3d3fb6f-ee15-440d-9b52-95390e524ccd clearfix">
+  
+    
+
+      <a href="https://www.unicef.org/">
+            <div class="field field--name-field-media-logo field--type-entity-reference field--label-hidden field--item"><div>
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+                      <div class="field--item">  <img src="/sites/voy/files/images/2018-10/unicef_footer_logo.png" width="600" height="140" alt="Unicef Logo" typeof="foaf:Image" class="img-responsive" />
+
+</div>
+                </div>
+
+</div>
+</div>
+      </a>
+  </section>
+
+
+  </div>
+
+          <div class="region region-footer-second">
+    <section id="block-footer" class="block block-menu-block block-menu-blockfooter clearfix">
+  <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="block block-menu-block block-menu-blockfooter">
+                      <h2 class="sr-only" id="block-footer-menu">Footer</h2>
+
+          
+      <ul region="footer_second" class="menu menu--footer nav">
+                        <li>
+        <a href="/terms-use" data-drupal-link-system-path="node/496">LEGAL</a>
+                  </li>
+                        <li>
+        <a href="/privacy-policy" data-drupal-link-system-path="node/486">PRIVACY POLICY</a>
+                  </li>
+                        <li>
+        <a href="/faq" data-drupal-link-system-path="node/1851">FAQ</a>
+                  </li>
+        </ul>
+  
+
+      </nav>
+</section>
+
+  </div>
+
+          </footer>
+    <div class="region region-footer-bottom">
+    <section id="block-footercopyright-2" class="block--basic block-footercopyright-2 block block-block-content block-block-content6ac8cb08-73b9-4173-b48d-a18de9c5181d clearfix">
+  
+    
+
+      
+            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><p>C 2019 Voices of Youth. All Rights Reserved. </p></div>
+      
+  </section>
+
+<section id="block-footerbuttons" class="block--button_block block-footerbuttons block block-block-content block-block-contenteb1a2c12-9dee-40ac-9d95-f4697f638931 clearfix">
+  
+    
+
+      
+      <div class="field field--name-field-button-link field--type-link field--label-hidden field--items">
+              <div class="field--item"><a href="/add/blog">Submit a Post</a></div>
+              <div class="field--item"><a href="/add/spark">Submit a spark</a></div>
+          </div>
+  
+  </section>
+
+
+  </div>
+
+  </div>
+</div>
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/11661","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"blazy\/load,block_cookies\/block-cookies,bootstrap\/popover,bootstrap\/tooltip,classy\/node,core\/html5shiv,disqus\/disqus,extlink\/drupal.extlink,flag\/flag.link,flag\/flag.link_ajax,paragraphs\/drupal.paragraphs.unpublished,poll\/drupal.poll-links,search_api_autocomplete\/search_api_autocomplete,sharethis\/sharethis,sharethis\/sharethispickerexternalbuttons,sharethis\/sharethispickerexternalbuttonsws,system\/base,unicef_voy\/base,views\/views.module,views_infinite_scroll\/views-infinite-scroll,voy_common\/voy_common.displaySubmitPostLink","theme":"unicef_voy","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"data":{"extlink":{"extTarget":true,"extTargetNoOverride":false,"extNofollow":0,"extFollowNoOverride":0,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":false,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":[]}},"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EWe use cookies and other identifiers to help us to give you the best experience of our website. You can learn more about how we use cookies and other identifiers, and how to change your settings, in our Cookies Policy. By continuing to use our website without changing your settings, you agree to allow us to use cookies and other identifiers. If you would prefer that we limit our use of cookies and identifiers, you can change your cookies settings.\u003C\/p\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EOK, I agree\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--opt-in\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-secondary-button\u0022\u003EOK, I agree\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022decline-button eu-cookie-compliance-default-button\u0022\u003ENo, thanks\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/privacy-policy","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":null,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"opt_in","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":null,"cookie_categories":[],"enable_save_preferences_button":null,"fix_first_cookie_category":null,"select_all_categories_by_default":null},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":"","popover_enabled":1,"popover_animation":1,"popover_auto_close":1,"popover_container":"body","popover_content":"","popover_delay":"0","popover_html":0,"popover_placement":"right","popover_selector":"","popover_title":"","popover_trigger":"click","tooltip_enabled":1,"tooltip_animation":1,"tooltip_container":"body","tooltip_delay":"0","tooltip_html":0,"tooltip_placement":"auto bottom","tooltip_selector":"","tooltip_trigger":"hover"},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:77c4e82d97d24d37ce56ac003f7826eb6a4269bbb6522b701243b799d52c0642":{"view_name":"related_blogs","view_display_id":"related_stories_block","view_args":"11661\/1821+2556+2451+2186+1561+1626+1856+1886","view_path":"\/blog\/importance-ethical-travel","view_base_path":null,"view_dom_id":"77c4e82d97d24d37ce56ac003f7826eb6a4269bbb6522b701243b799d52c0642","pager_element":0}}},"field_group":{"html_element":{"mode":"default","context":"view","settings":{"id":"","classes":"icon-container","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast","label":"Icon Container"}}},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50},"sharethis":{"publisher":"dr-89604a29-6efc-5958-db49-b20649d29f24","version":"5x","doNotCopy":true,"hashAddressBar":false,"doNotHash":true},"search_api_autocomplete":{"search":{"auto_submit":true,"min_length":3}},"disqus":{"domain":"voydev","url":"https:\/\/www.voicesofyouth.org\/blog\/importance-ethical-travel","title":"The Importance of Ethical Travel","identifier":"node\/11661","disable_mobile":false,"language":"en","sso":{"name":"Voices of Youth","url":"https:\/\/www.voicesofyouth.org\/user\/login?destination=disqus\/closewindow","logout":"https:\/\/www.voicesofyouth.org\/user\/logout?destination=\/blog\/importance-ethical-travel","width":800,"height":600,"button":"https:\/\/www.voicesofyouth.org\/sites\/voy\/themes\/custom\/unicef_voy\/logo.svg","icon":"\/sites\/voy\/themes\/custom\/unicef_voy\/favicon.ico"},"api_key":"bWl0lrc3QV4vmt1TVLCFijk03tVOyiKirvKjGExh1J4NooFzfuXfno7yqYBd79uJ","remote_auth_s3":"W10= 02224af3299ebcafa33dd72206790e5bdad6ae5e 1603645025"},"user":{"uid":0,"permissionsHash":"caaa1ffba5b3c11d5c5ff80474e53fd674bae4f7543dcff7ee64183116279870"}}</script>
+<script src="/sites/voy/files/js/js_lWil9O2JHE7OsXT6cFKvgIcvcyqfIJJ7STAx2edzw9E.js"></script>
+<script src="/sites/voy/themes/custom/unicef_voy/bower_components/matchHeight/dist/jquery.matchHeight-min.js?qi1bg8"></script>
+<script src="/sites/voy/themes/custom/unicef_voy/dist/scripts/js/vendor/appendAround.min.js?qi1bg8"></script>
+<script src="/sites/voy/themes/custom/unicef_voy/bower_components/simplestatemanager/dist/ssm.min.js?qi1bg8"></script>
+<script src="/sites/voy/files/js/js_vQD7B8R3FvEwwbjK0zPguif3lqqvLljksuBwJ7q-xKo.js"></script>
+<script src="/sites/voy/themes/custom/unicef_voy/dist/scripts/js/script.min.js?qi1bg8"></script>
+<script src="/sites/voy/files/js/js_S0nKoJtBVFuEVmLWiyGboTTyr9RoVNnZzr_ejJKTmzo.js"></script>
+<script src="https://ws.sharethis.com/button/buttons.js"></script>
+<script src="/sites/voy/files/js/js_ZT5zVgb1vxhMluXMP7eCQawaqHiyzFq_XlR1laQU0Xk.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b54c1d4d8c","applicationID":"597292158","transactionName":"YV1bYUtYWEAEVExYDlgXeFZNUFldSnNKRBFXVGVbVl1TbyZYVkUTWVRVUEtleFwBUm5YBEF7VltNS1lfCVJKHF9AUVxC","queueTime":0,"applicationTime":931,"atts":"TRpYFwNCS04=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,10 @@
+p {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+body {
+  background-image: url("2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

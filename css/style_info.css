@@ -1,0 +1,14 @@
+h1 {
+  font-style: italic;
+  text-align: center;
+}
+
+ul {
+font-weight: bold;
+}
+
+body {
+  background-image: url("4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

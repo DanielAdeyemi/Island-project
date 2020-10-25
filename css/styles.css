@@ -13,13 +13,15 @@ h2 {
 }
 
 body {
-  object-position: bottom;
   background-image: url("1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-style: italic;
   font-weight: bold;
-  color: sandybrown;
-  text-decoration-color: sienna;
+  color: black;
   font-size: 27px;
+}
+
+ul {
+  color: aliceblue;
 }
