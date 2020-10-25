@@ -1,0 +1,26 @@
+h1 {
+  color: navy;
+  text-align: center;
+}
+
+h2 {
+  color: blue;
+  text-align: center;
+  text-underline-position: below;
+  font-style: oblique;
+}
+
+p {
+  font-size: large;
+  font-style: initial;
+  font-family: fantasy;
+}
+
+ul {
+  font-style: italic;
+  color: darkred;
+}
+
+body {
+  background-color: gold;
+}
